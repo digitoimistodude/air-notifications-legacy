@@ -2,6 +2,10 @@
 
 The basic idea is to show notifications in one or more locations, the logic being similar to WordPress menu locations. You can register as many notice locations and types you want.
 
+## Requirements
+
+CMB2 plugin installed and activated or CMB2 loaded with composer.
+
 ## Register locations
 
 There is one location called `default` registered by default. To add more locations, use `air_notifications_register-locations` -filter.
