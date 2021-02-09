@@ -2,7 +2,7 @@
   "name": "digitoimistodude/air-notifications",
   "description": "Add simple notifications to your desired location",
   "require": {
-    "cmb2/cmb2": "dev-master"
+    "cmb2/cmb2": "^2.8.0"
   },
   "autoload": {
     "files": ["vendor/cmb2/cmb2/init.php"]
