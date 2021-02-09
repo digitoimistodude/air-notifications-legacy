@@ -1,6 +1,18 @@
 {
   "name": "digitoimistodude/air-notifications",
+  "type": "wordpress-plugin",
   "description": "Add simple notifications to your desired location",
+  "keywords": [
+    "wordpress",
+    "plugin"
+  ],
+  "license": "GPL-3.0+",
+  "version": "1.0.0",
+  "authors": [{
+    "name": "Timi Wahalahti",
+    "email": "timi@dude.fi",
+    "homepage": "https://github.com/timiwahalahti"
+  }],
   "require": {
     "cmb2/cmb2": "^2.8.0"
   },
