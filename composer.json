@@ -7,16 +7,10 @@
     "plugin"
   ],
   "license": "GPL-3.0+",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "authors": [{
-    "name": "Timi Wahalahti",
-    "email": "timi@dude.fi",
-    "homepage": "https://github.com/timiwahalahti"
-  }],
-  "require": {
-    "cmb2/cmb2": "^2.8.0"
-  },
-  "autoload": {
-    "files": ["vendor/cmb2/cmb2/init.php"]
-  }
+    "name": "Niku Hietanen",
+    "email": "niku@dude.fi",
+    "homepage": "https://github.com/niq1982"
+  }]
 }
