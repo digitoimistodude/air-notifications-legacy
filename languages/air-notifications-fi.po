@@ -1,0 +1,181 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Air notifications\n"
+"POT-Creation-Date: 2020-10-06 14:02+0300\n"
+"PO-Revision-Date: 2020-10-06 14:02+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: air-notifications.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: inc/custom-meta-box.php:17 inc/post-type.php:26 inc/post-type.php:43
+msgid "Notification"
+msgstr "Ilmoitus"
+
+#: inc/custom-meta-box.php:27
+msgid "Content"
+msgstr "Sisältö"
+
+#: inc/custom-meta-box.php:50
+msgid "Enabled until"
+msgstr "Käytössä, kunnes"
+
+#: inc/custom-meta-box.php:51
+msgid "Hide the notification after scheduled time"
+msgstr "Piilota ilmoitus ajoitetun ajan jälkeen"
+
+#: inc/custom-meta-box.php:69
+msgid "Location"
+msgstr "Sijainti"
+
+#: inc/custom-meta-box.php:70
+msgid "Select the location this notice is shown in"
+msgstr "Valitse sijainti, jossa tämä ilmoitus näkyy"
+
+#: inc/custom-meta-box.php:90
+msgid "Type"
+msgstr "Tyyppi"
+
+#: inc/custom-meta-box.php:105
+msgid "Dismissable"
+msgstr "Hylättävä"
+
+#: inc/custom-meta-box.php:106
+msgid "User can dismiss the notification"
+msgstr "Käyttäjä voi hylätä ilmoituksen"
+
+#: inc/custom-meta-box.php:119
+msgid "One-time"
+msgstr "Kertaluontoinen"
+
+#: inc/custom-meta-box.php:120
+msgid "User will not see the notification again after dismissing it"
+msgstr "Käyttäjä ei näe ilmoitusta uudelleen sen hylkäämisen jälkeen"
+
+#: inc/notifications.php:139
+msgid "Close notification"
+msgstr "Sulje ilmoitus"
+
+#: inc/notifications.php:156
+msgid "Notice"
+msgstr "Ilmoitus"
+
+#: inc/notifications.php:157
+msgid "Notice: "
+msgstr "Huomaa:"
+
+#: inc/notifications.php:161
+msgid "Alert"
+msgstr "Hälytys"
+
+#: inc/notifications.php:162
+msgid "Alert: "
+msgstr "Huomaa:"
+
+#: inc/notifications.php:190
+msgid "Default location"
+msgstr "Oletussijainti"
+
+#: inc/post-type.php:23
+msgctxt "Post Type General Name"
+msgid "Notifications"
+msgstr "Ilmoitukset"
+
+#: inc/post-type.php:24
+msgctxt "Post Type Singular Name"
+msgid "Notification"
+msgstr "Ilmoitus"
+
+#: inc/post-type.php:25
+msgid "Notifications"
+msgstr "Ilmoitukset"
+
+#: inc/post-type.php:27
+msgid "All Notifications"
+msgstr "Kaikki ilmoitukset"
+
+#: inc/post-type.php:28
+msgid "Add New Notification"
+msgstr "Lisää uusi ilmoitus"
+
+#: inc/post-type.php:29
+msgid "Add New"
+msgstr "Lisää uusi"
+
+#: inc/post-type.php:30
+msgid "New Notification"
+msgstr "Uusi ilmoitus"
+
+#: inc/post-type.php:31
+msgid "Edit Notification"
+msgstr "Muokkaa ilmoitusta"
+
+#: inc/post-type.php:32
+msgid "Update Notification"
+msgstr "Päivitä ilmoitus"
+
+#: inc/post-type.php:33
+msgid "View Notification"
+msgstr "Näytä ilmoitus"
+
+#: inc/post-type.php:34
+msgid "View Notifications"
+msgstr "Näytä ilmoitukset"
+
+#: inc/post-type.php:35
+msgid "Search Notifications"
+msgstr "Hae ilmoituksia"
+
+#: inc/post-type.php:36
+msgid "Not found"
+msgstr "Ei löytynyt"
+
+#: inc/post-type.php:37
+msgid "Not found in Trash"
+msgstr "Ei löytynyt roskakorista"
+
+#: inc/post-type.php:38
+msgid "Notification list"
+msgstr "Ilmoitukset"
+
+#: inc/post-type.php:39
+msgid "Notification list navigation"
+msgstr "Ilmoitukset"
+
+#: inc/post-type.php:40
+msgid "Filter notification list"
+msgstr "Suodata ilmoituksia"
+
+#. Plugin Name of the plugin/theme
+msgid "Air notifications"
+msgstr "Ilmailmoitukset"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/digitoimistodude/air-notifications"
+msgstr "https://github.com/digitoimistodude/air-notifications"
+
+#. Description of the plugin/theme
+msgid "Add simple notifications to your desired location"
+msgstr "Lisää yksinkertaisia ilmoituksia haluamaasi sijaintiin"
+
+#. Author of the plugin/theme
+msgid "Digitoimisto Dude Oy, Niku Hietanen"
+msgstr "Digitoimisto Dude Oy, Niku Hietanen"
+
+#. Author URI of the plugin/theme
+msgid "https://www.dude.fi"
+msgstr "https://www.dude.fi"
