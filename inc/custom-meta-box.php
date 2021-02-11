@@ -126,8 +126,8 @@ function register_meta_boxes() {
         'default' => isset( $_GET['post'] ) ? '' : $settings['defaults']['cookie'], // Set default only on new posts
         'type'    => 'radio_inline',
         'options' => [
-          'on'  => esc_html__( 'Yes', 'air-notifications' ),
-          'off' => esc_html__( 'No', 'air-notifications' ),
+          'off'  => esc_html__( 'Yes', 'air-notifications' ),
+          'on' => esc_html__( 'No', 'air-notifications' ),
         ],
       ]
     );
