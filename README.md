@@ -40,10 +40,12 @@ This prints all notifications saved with the location
   add_filter( 'air_notifications_register_types', function( $types ) {
     return [
       'notice' => [
+        'name'    => => __( 'Notice: ', 'air-notifications'),
         'prepend' => __( 'Notice: ', 'air-notifications'),
-        'append' => '',
+        'append'  => '',
       ],
       'alert'  => [
+        'name'    => __( 'Alert: ', 'air-notifications'),
         'prepend' => __( 'Alert: ', 'air-notifications'),
         'append'  => '',
       ],
