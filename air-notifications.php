@@ -3,11 +3,11 @@
  * Plugin Name: Air notifications
  * Plugin URI: https://github.com/digitoimistodude/air-notifications
  * Description: Add simple notifications to your desired location
- * Version: 0.0.1
+ * Version: 1.0.0
  * Author: Digitoimisto Dude Oy, Niku Hietanen
  * Author URI: https://www.dude.fi
  * Requires at least: 5.0
- * Tested up to: 5.3
+ * Tested up to: 5.6
  * License: GPL-3.0+
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  *
