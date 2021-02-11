@@ -22,14 +22,17 @@ function register_scripts() {
 
     for (var index = 0; index < notifications.length; index++) {
       var notification = notifications[index];
+      var saveCookie = notification.dataset.saveCookie === "on";
 
-      if (notification.dataset.saveCookie && window.localStorage.getItem(notification.id)) {
+      if (saveCookie && window.localStorage.getItem(notification.id)) {
         // Cookies are in use and this has been dismissed before, so continue
         continue;
       }
 
       // Show the notice if user has not dismissed it or cookies are not enabled
       notification.classList.add("show");
+      notification.setAttribute("aria-hidden", "false");
+
       body.classList.add("has-notifications");
 
       // Find close button
@@ -41,11 +44,13 @@ function register_scripts() {
           // Dismiss the notification
           event.target.parentNode.parentNode.parentNode.classList.add("dismissed");
 
+          debugger;
+
           // Remove body class
           body.classList.remove("has-notifications");
 
           // Save cookie
-          if (this.parentNode.dataset.saveCookie) {
+          if (saveCookie) {
             window.localStorage.setItem(this.parentNode.id, true);
           }
         });
