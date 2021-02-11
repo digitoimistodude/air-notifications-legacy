@@ -19,7 +19,6 @@
 
 namespace Air_Notifications;
 
-require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/inc/notifications.php';
 require __DIR__ . '/inc/scripts.php';
 require __DIR__ . '/inc/post-type.php';
