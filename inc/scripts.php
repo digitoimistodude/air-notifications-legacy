@@ -18,7 +18,6 @@ function register_scripts() {
   $script = '(function() {
     // Find all notifications
     var notifications = document.querySelectorAll(".air-notification");
-    var body = document.getElementsByTagName("body")[0];
 
     for (var index = 0; index < notifications.length; index++) {
       var notification = notifications[index];
@@ -33,25 +32,26 @@ function register_scripts() {
       notification.classList.add("show");
       notification.setAttribute("aria-hidden", "false");
 
-      body.classList.add("has-notifications");
-
       // Find close button
       var closeButton = notification.querySelector(".air-notification__close");
 
       if ("undefined" !== typeof(closeButton) && closeButton) {
 
         closeButton.addEventListener("click", function(event) {
-          // Dismiss the notification
-          event.target.parentNode.parentNode.parentNode.classList.add("dismissed");
+          var currentNotification = this.parentNode;
+          var saveCookie = currentNotification.dataset.saveCookie === "on";
 
-          debugger;
 
-          // Remove body class
-          body.classList.remove("has-notifications");
+          // Dismiss the notification, animate first
+          currentNotification.classList.add("closing");
+
+          window.setTimeout(function() {
+            currentNotification.classList.add("dismissed");
+          }, 400);
 
           // Save cookie
           if (saveCookie) {
-            window.localStorage.setItem(this.parentNode.id, true);
+            window.localStorage.setItem(currentNotification.id, true);
           }
         });
       }
@@ -59,4 +59,11 @@ function register_scripts() {
   })()';
 
   wp_add_inline_script( 'air-notifications', $script );
+}
+
+/**
+ * Register base styles
+ */
+function register_styles() {
+  wp_register_style( 'air-notifications', plugin_dir_url( __DIR__ ) . 'styles/default.css', array(), PLUGIN_VERSION );
 }
