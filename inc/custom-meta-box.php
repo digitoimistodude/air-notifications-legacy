@@ -3,7 +3,7 @@
  * @Author: Niku Hietanen
  * @Date: 2020-06-26 14:00:00
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2020-10-06 14:02:38
+ * @Last Modified time: 2021-02-11 16:34:09
  * @package air-notifications
  */
 
@@ -106,7 +106,11 @@ function register_meta_boxes() {
         'desc'    => esc_html__( 'User can dismiss the notification', 'air-notifications' ),
         'id'      => 'air_notification_dismissable',
         'default' => isset( $_GET['post'] ) ? '' : $settings['defaults']['dismissable'], // Set default only on new posts
-        'type'    => 'checkbox',
+        'type'    => 'radio_inline',
+        'options' => [
+          'on'  => esc_html__( 'Yes', 'air-notifications' ),
+          'off' => esc_html__( 'No', 'air-notifications' ),
+        ],
       ]
     );
 
@@ -120,7 +124,11 @@ function register_meta_boxes() {
         'desc'    => esc_html__( 'User will not see the notification again after dismissing it', 'air-notifications' ),
         'id'      => 'air_notification_cookie',
         'default' => isset( $_GET['post'] ) ? '' : $settings['defaults']['cookie'], // Set default only on new posts
-        'type'    => 'checkbox',
+        'type'    => 'radio_inline',
+        'options' => [
+          'on'  => esc_html__( 'Yes', 'air-notifications' ),
+          'off' => esc_html__( 'No', 'air-notifications' ),
+        ],
       ]
     );
 

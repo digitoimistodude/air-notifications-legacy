@@ -4,8 +4,8 @@
  *
  * @Author: Niku Hietanen
  * @Date: 2020-06-25 15:19:26
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-10-07 11:28:38
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2021-02-11 16:35:26
  * @package air-notifications
  */
 
@@ -122,7 +122,7 @@ function single_notification( $notification ) {
 
   $classes = 'air-notification';
   $classes .= ' air-notification--' . $notification['type'];
-  $classes .= $notification['dismissable'] ? ' air-notification--dismissable' : '';
+  $classes .= ( 'on' === $notification['dismissable'] ) ? ' air-notification--dismissable' : '';
 
   $output = '<div class="' . $classes . '" id="' . $id . '" data-save-cookie="' . $notification['cookie'] . '">';
 
@@ -132,12 +132,11 @@ function single_notification( $notification ) {
 
   $output .= '<span class="air-notification__content">' . wp_kses_post( $notification['content'] ) . '</span>';
 
-
   if ( $type_settings['append'] ) {
     $output .= '<span class="air-notification__append">' . $type_settings['append'] . '</span>';
   }
 
-  if ( $notification['dismissable'] ) {
+  if ( 'on' === $notification['dismissable'] ) {
     $output .= '<button type="button" class="air-notification__close" data-notification-id="' . $id . '"><span aria-hidden="true">' . $notification_settings['dismissable_icon'] . '</span><span class="screen-reader-text">' . __( 'Close notification', 'air-notifications' ) . '</span></button>';
   }
 
@@ -212,8 +211,8 @@ function get_notification_settings() {
       'schedule_end' => true,
     ],
     'defaults' => [
-      'cookie'      => false,
-      'dismissable' => true,
+      'cookie'      => 'off',
+      'dismissable' => 'on',
       'location'    => 'default',
       'type'        => 'notice',
     ],
