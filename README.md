@@ -12,14 +12,13 @@ There is one location called `default` registered by default. To add more locati
 
 ```
 <?php
-  add_filter( 'air_notifications_register_locations', 'add_notification_locations', 10, 1 );
+  add_filter( 'air_notifications_register_locations', 'register_notification_locations', 10, 1 );
 
-  function add_notification_locations( $locations ) {
-    $locations[] = [
-      'top-bar' => [
-        'name' => __( 'Top bar', 'air-notifications' ),
-      ]
+  function register_notification_locations( $locations ) {
+    $locations['top-bar'] = [
+      'name' => __( 'Top bar', 'air-notifications' ),
     ];
+    
     return $locations;
   }
 ?>
