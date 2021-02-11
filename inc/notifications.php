@@ -20,6 +20,7 @@ namespace Air_Notifications;
 function do_notifications( $args ) {
   // Enqueue script only if we're doing notifications
   \wp_enqueue_script( 'air-notifications' );
+  \wp_enqueue_style( 'air-notifications' );
 
   $default_args = [
     'location' => 'default',
@@ -34,13 +35,11 @@ function do_notifications( $args ) {
     return;
   }
 
-  $output = '<div class="notification-wrapper">';
+  $output = '';
 
   foreach ( $notifications as $notification ) {
     $output .= single_notification( $notification );
   }
-
-  $output .= '</div>';
 
   echo $output; // phpcs:ignore
 

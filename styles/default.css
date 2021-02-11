@@ -1,0 +1,65 @@
+:root {
+  --air-notification-bg: #fafafa;
+  --air-notification-border: lightgray;
+  --air-notification-color: #1d1d1d;
+}
+
+.air-notification {
+  display: none;
+  background-color: var(--air-notification-bg);
+  border: 1px solid var(--air-notification-border);
+  color: var(--air-notification-color);
+  border-radius: 4px;
+  margin: 1rem;
+  padding: 1rem 1.4rem;
+  align-items: center;
+  transition: opacity 0.3s ease-in;
+  position: relative;
+  min-height: 3rem;
+}
+
+.air-notification.show {
+  display: flex;
+}
+
+.air-notification.show.closing {
+  opacity: 0;
+}
+
+.air-notification.show.closing.dismissed {
+  display: none;
+}
+
+.air-notification button {
+  background-color: var(--air-notification-border);
+  color: var(--air-notification-color);
+  position: absolute;
+  right: 1rem;
+  height: 3rem;
+  width: 4rem;
+  padding: 0;
+}
+
+.air-notification button:hover {
+  color: var(--air-notification-border);
+  background-color: var(--air-notification-color);
+}
+
+.air-notification button svg {
+  pointer-events: none;
+  height: 1.2rem;
+}
+
+.air-notification--alert {
+  --air-notification-border: rgb(210, 59, 59);
+  --air-notification-bg: #853939;
+  --air-notification-color: #fafafa;
+}
+
+.air-notification__prepend {
+  margin-right: 1rem;
+}
+
+.air-notification__append {
+  margin-left: 1rem;
+}

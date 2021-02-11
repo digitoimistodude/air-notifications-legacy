@@ -19,6 +19,8 @@
 
 namespace Air_Notifications;
 
+const PLUGIN_VERSION = '1.0.0';
+
 require __DIR__ . '/inc/notifications.php';
 require __DIR__ . '/inc/scripts.php';
 require __DIR__ . '/inc/post-type.php';
@@ -26,6 +28,7 @@ require __DIR__ . '/inc/custom-meta-box.php';
 
 // Register scripts
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\register_scripts' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\register_styles' );
 
 // Register the notification action
 add_action( 'air_notifications_do_notifications', __NAMESPACE__ . '\do_notifications', 10, 1 );
