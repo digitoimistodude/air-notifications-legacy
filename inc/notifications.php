@@ -124,7 +124,7 @@ function single_notification( $notification ) {
   $classes .= ' air-notification--' . $notification['type'];
   $classes .= $notification['dismissable'] ? ' air-notification--dismissable' : '';
 
-  $output = '<div class="' . $classes . '" id="' . $id . '" data-save-cookie="' . $notification['cookie'] . '">';
+  $output = '<div class="' . $classes . '" id="' . $id . '" data-save-cookie="' . $notification['cookie'] . '" aria-hidden="true">';
 
   if ( $type_settings['prepend'] ) {
     $output .= '<span class="air-notification__prepend">' . $type_settings['prepend'] . '</span>';
