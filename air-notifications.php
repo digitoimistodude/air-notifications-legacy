@@ -3,7 +3,7 @@
  * Plugin Name: Air notifications
  * Plugin URI: https://github.com/digitoimistodude/air-notifications
  * Description: Add simple notifications to your desired location
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Digitoimisto Dude Oy, Niku Hietanen
  * Author URI: https://www.dude.fi
  * Requires at least: 5.0
@@ -19,7 +19,7 @@
 
 namespace Air_Notifications;
 
-const PLUGIN_VERSION = '1.0.0';
+const PLUGIN_VERSION = '1.0.1';
 
 require __DIR__ . '/inc/notifications.php';
 require __DIR__ . '/inc/scripts.php';
