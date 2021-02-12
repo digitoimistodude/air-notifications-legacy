@@ -5,7 +5,7 @@
  * @Author: Niku Hietanen
  * @Date: 2020-06-25 15:19:26
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-02-11 16:35:26
+ * @Last Modified time: 2021-02-12 10:54:08
  * @package air-notifications
  */
 
@@ -23,13 +23,18 @@ function do_notifications( $args ) {
   \wp_enqueue_style( 'air-notifications' );
 
   $default_args = [
-    'location' => 'default',
+    'location'      => 'default',
+    'override_cpt'  => false,
   ];
 
   $args = \wp_parse_args( $args, $default_args );
 
-  // Check if these are manually added notifications, otherwise load from CPT
-  $notifications = isset( $args['notifications'] ) ? $args['notifications'] : get_notifications( $args['location'] );
+  // Check if manual notifications should be merged to ones in CPT or override all notifications
+  if ( ! $args['override_cpt'] && isset( $args['notifications'] ) ) {
+    $notifications = array_merge( $args['notifications'], get_notifications( $args['location'] ) );
+  } else {
+    $notifications = isset( $args['notifications'] ) ? $args['notifications'] : get_notifications( $args['location'] );
+  }
 
   if ( empty( $notifications ) ) {
     return;
