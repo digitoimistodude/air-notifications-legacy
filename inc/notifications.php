@@ -140,11 +140,13 @@ function single_notification( $notification ) {
     $output .= '<span class="air-notification__append">' . $type_settings['append'] . '</span>';
   }
 
+  $output .= '</p>';
+
   if ( 'on' === $notification['dismissable'] ) {
     $output .= '<button type="button" class="air-notification__close" data-notification-id="' . $id . '"><span aria-hidden="true">' . $notification_settings['dismissable_icon'] . '</span><span class="screen-reader-text">' . __( 'Close notification', 'air-notifications' ) . '</span></button>';
   }
 
-  $output .= '</p></div>';
+  $output .= '</div>';
 
   return \apply_filters( 'air_notifications_single_notification', $output, $notification );
 }
