@@ -128,7 +128,7 @@ function single_notification( $notification ) {
   $classes .= ' air-notification--' . $notification['type'];
   $classes .= ( 'on' === $notification['dismissable'] ) ? ' air-notification--dismissable' : '';
 
-  $output = '<div class="' . $classes . '" id="' . $id . '" data-save-cookie="' . $notification['cookie'] . '" aria-hidden="true">';
+  $output = '<div class="' . $classes . '" id="' . $id . '" data-save-cookie="' . $notification['cookie'] . '" aria-hidden="true"><p>';
 
   if ( $type_settings['prepend'] ) {
     $output .= '<span class="air-notification__prepend">' . $type_settings['prepend'] . '</span>';
@@ -139,6 +139,8 @@ function single_notification( $notification ) {
   if ( $type_settings['append'] ) {
     $output .= '<span class="air-notification__append">' . $type_settings['append'] . '</span>';
   }
+
+  $output .= '</p>';
 
   if ( 'on' === $notification['dismissable'] ) {
     $output .= '<button type="button" class="air-notification__close" data-notification-id="' . $id . '"><span aria-hidden="true">' . $notification_settings['dismissable_icon'] . '</span><span class="screen-reader-text">' . __( 'Close notification', 'air-notifications' ) . '</span></button>';
