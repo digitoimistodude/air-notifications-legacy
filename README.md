@@ -37,20 +37,20 @@ This prints all notifications saved with the location
 ## Set notice types
 
 ```
-  add_filter( 'air_notifications_register_types', function( $types ) {
-    return [
-      'notice' => [
-        'name'    => => __( 'Notice: ', 'air-notifications'),
-        'prepend' => __( 'Notice: ', 'air-notifications'),
-        'append'  => '',
-      ],
-      'alert'  => [
-        'name'    => __( 'Alert: ', 'air-notifications'),
-        'prepend' => __( 'Alert: ', 'air-notifications'),
-        'append'  => '',
-      ],
-    ];
-  }, 10, 1);
+add_filter( 'air_notifications_register_types', function( $types ) {
+  return [
+    'notice' => [
+      'name'    => __( 'Notice: ', 'air-notifications' ),
+      'prepend' => __( 'Notice: ', 'air-notifications' ),
+      'append'  => '',
+    ],
+    'ad'  => [
+      'name'    => __( 'Ad: ', 'air-notifications' ),
+      'prepend' => __( 'Ad: ', 'air-notifications' ),
+      'append'  => '',
+    ],
+  ];
+}, 10, 1);
 ```
 
 ## Add notices via code
