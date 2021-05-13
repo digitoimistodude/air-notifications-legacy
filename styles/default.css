@@ -20,7 +20,6 @@
   align-items: center;
   background-color: var(--air-notification-bg);
   border: 1px solid var(--air-notification-border);
-  border-radius: 4px;
   color: var(--air-notification-color);
   display: none;
   position: relative;
@@ -31,11 +30,9 @@
 .air-notification button {
   background-color: var(--air-notification-border);
   color: var(--air-notification-color);
-  height: 3rem;
   padding: 0;
   position: absolute;
-  right: 1rem;
-  width: 4rem;
+  right: 0;
 }
 
 .air-notification button:hover,
