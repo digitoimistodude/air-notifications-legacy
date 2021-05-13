@@ -38,8 +38,7 @@
 
 .air-notification button:hover,
 .air-notification button:focus {
-  background-color: var(--air-notification-color);
-  color: var(--air-notification-border);
+  background-color: transparent;
 }
 
 /* Close icon */
