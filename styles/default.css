@@ -28,7 +28,8 @@
 
 /* Close button */
 .air-notification button {
-  background-color: var(--air-notification-border);
+  background-color: transparent;
+  border: 0;
   color: var(--air-notification-color);
   padding: 0;
   position: absolute;
